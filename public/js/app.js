@@ -1,5 +1,3 @@
-console.log('Client side JS file is loaded!');
-
 const msg1 = document.getElementById('msg1');
 const msg2 = document.getElementById('msg2');
 
