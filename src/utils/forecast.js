@@ -14,7 +14,7 @@ const forecast = (latitude, longitude, callback) => {
         temp: body.currently.temperature, 
         precipitation: body.currently.precipProbability,
         maxTemp: body.daily.data[0].temperatureHigh,
-        minTemp: body.daily.data[0].temperatureMin,
+        minTemp: body.daily.data[0].temperatureLow,
         windSpeed: body.currently.windSpeed,
         humidity: body.currently.humidity,
         pressure: body.currently.pressure
