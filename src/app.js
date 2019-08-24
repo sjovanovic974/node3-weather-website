@@ -54,7 +54,7 @@ app.get('/weather', (req, res) => {
             return res.send({ error });
         }
 
-        forecast(latitude, longitude, (error, {summary, temp, precipitation}) => {
+        forecast(latitude, longitude, (error, {summary, temp, precipitation, maxTemp, minTemp, windSpeed, humidity, pressure}) => {
             if(error) {
                 return res.send({ error });
             }
@@ -63,7 +63,12 @@ app.get('/weather', (req, res) => {
                 location,
                 summary, 
                 temp,
-                precipitation
+                precipitation,
+                maxTemp,
+                minTemp,
+                windSpeed,
+                humidity,
+                pressure
             });
         });
     });

@@ -12,7 +12,12 @@ const forecast = (latitude, longitude, callback) => {
       callback(undefined, {
         summary: body.daily.data[0].summary,
         temp: body.currently.temperature, 
-        precipitation: body.currently.precipProbability
+        precipitation: body.currently.precipProbability,
+        maxTemp: body.daily.data[0].temperatureHigh,
+        minTemp: body.daily.data[0].temperatureMin,
+        windSpeed: body.currently.windSpeed,
+        humidity: body.currently.humidity,
+        pressure: body.currently.pressure
       });
     }
   });
