@@ -6,7 +6,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
   msg1.textContent = 'Loading...';
   msg2.textContent = '';
 
-  fetch(`http://127.0.0.1:3000/weather?address=${search}`).then((response) => {
+  fetch(`/weather?address=${search}`).then((response) => {
     response.json().then((data) => {
       if(data.error){
         msg1.textContent = data.error;
